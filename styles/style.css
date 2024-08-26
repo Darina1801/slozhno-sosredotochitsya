@@ -13,6 +13,7 @@
   align-items: center;
   font-size: var(--font-size);
   block-size: 100vh;
+  min-height: 668px;
 }
 
 .decorated-zone::before,
@@ -124,8 +125,6 @@
   background-color: var(--accent-color);
 }
 
-/* MAIN */
-
 .sections {
   margin: 40px 10px;
   font-size: var(--font-size);
@@ -220,47 +219,23 @@
 }
 
 @media (width >= 768px) {
-  .decorated-zone::before,
-  .decorated-zone::after {
-    content: "";
-    position: absolute;
-    inline-size: 25px;
-    block-size: 25px;
-  }
-
   .decorated-zone::before {
-    border-inline-end: 1px solid var(--decoration-color);
-    border-block-start: 1px solid var(--decoration-color);
     inset-inline-end: var(--medium-gap);
     inset-block-start: var(--medium-gap);
   }
 
   .decorated-zone::after {
-    border-inline-start: 1px solid var(--decoration-color);
-    border-block-end: 1px solid var(--decoration-color);
     inset-inline-start: var(--medium-gap);
     inset-block-end: var(--medium-gap);
   }
 
   .header__decoration {
-    position: absolute;
-    color: var(--accent-color);
-    font-size: var(--font-size);
-    line-height: 25px;
-    text-transform: uppercase;
     inset-inline-end: 48px;
     inset-block-start: var(--medium-gap);
   }
 
   .header__decoration::after {
-    content: '';
-    position: absolute;
-    inline-size: 9px;
-    block-size: 9px;
-    border-radius: 100%;
-    background-color: var(--decoration-color);
     box-shadow: 0 0 4px 2px var(--nav-color);
-    inset-block-start: 50%;
   }
 
   .header__description {
@@ -362,7 +337,6 @@
 @media (width >= 1024px) {
 
   .header__description {
-    margin-block-end: 20px;
     inline-size: 48vw;
   }
 
